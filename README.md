@@ -55,7 +55,7 @@ Se ha desarrollado un pipeline robusto y eficiente para la detección y análisi
 
 Esta pipeline integrada proporciona una solución completa para la detección y análisis de color de objetos en imágenes, combinando técnicas de vanguardia en detección de objetos, segmentación semántica y análisis de clusters. La flexibilidad del sistema permite su adaptación a diversos escenarios y tipos de objetos, garantizando resultados precisos y fiables.
 
-## Fase II: Pipeline para Estimación de Pose y Propiedades (Mediados de Abril 2024 - Mayo 2024)
+## Fase II: Pipeline para Estimación de Pose
 
 ### 1. Arquitectura para Estimación de Pose
 
