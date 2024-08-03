@@ -124,7 +124,6 @@ Estos hallazgos sugieren la necesidad de:
 
 #### Configuración Inicial
 1. Clone el repositorio de YOLOv9 en el directorio principal del proyecto:
-git clone https://github.com/WongKinYiu/yolov9
 
 2. Descargue los pesos pre-entrenados `yolo_ycb.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
 
