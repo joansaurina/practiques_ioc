@@ -22,7 +22,7 @@ Para la detección de objetos, se implementó el modelo YOLO v9, considerado est
 
 ### 3. Entrenamiento y Optimización
 
-El modelo YOLO v9 fue entrenado y optimizado utilizando el dataset YCB mejorado, con un enfoque en evitar el sobreajuste mediante técnicas de augmentación de datos, y provando de encontrar los hyperparámetros óptimos que fueron los utilizados para el entrenamiento definitivo.
+El modelo YOLO v9 fue entrenado y optimizado utilizando el dataset YCB mejorado, con un enfoque en evitar el sobreajuste mediante técnicas de augmentación de datos, y provando de encontrar los hiperparámetros óptimos que fueron los utilizados para el entrenamiento definitivo.
 
 ### 4. Validación de Resultados
 
