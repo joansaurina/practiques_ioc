@@ -118,6 +118,4 @@ Estos hallazgos sugieren la necesidad de:
 2. Una investigación más profunda sobre la estabilidad y reproducibilidad del método DOPE.
 3. Exploración de arquitecturas alternativas o métodos híbridos para la estimación de pose que puedan ofrecer resultados más consistentes y precisos.
 
-## Licencia
-
-[Pendiente de especificar]
+## Código y Guía de Uso
