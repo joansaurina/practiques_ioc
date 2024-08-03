@@ -147,12 +147,3 @@ Para una versión dinámica en tiempo real, se ha preparado el script `webcam_mo
 
 ### 2. Modelo YOLOv9 + Detección de Color
 
-
-Clona la carpeta del modelo yolov9 en el directorio del repositorio
-Coloca los pesos descargados yolo_ycb.pt en la carpeta weights
-Desde la carpeta object_detection ejecuta:
-main.py <img_size> <conf> <device> <weights> <source_folder> <project(save folder)>"
-
-Para una versión dinàmica en real time está preparado el script webcam_modified.py que hace uso de la libreria cv2. No se pudo probar porque las camaras del laboratorio no estaban preparadas.
-
-2. MODELO YOLOV9 + DETECCIÓN DE COLOR
