@@ -1,7 +1,7 @@
 # Prácticas IOC: Detección de Objetos y Análisis de Propiedades
 ## Joan Saurina
 
-Este repositorio contiene el trabajo realizado para las prácticas del Instituto de Organización y Control (IOC), enfocadas en la detección de objetos y el análisis de sus propiedades utilizando técnicas de aprendizaje profundo y visión por computador.
+Este repositorio contiene el trabajo realizado para las prácticas del Instituto de Organización y Control (IOC), enfocadas en la identificación de objetos, el análisis de sus propiedades y la detección de su posición utilizando técnicas de aprendizaje profundo y visión por computador.
 
 ## Fase I: Pipeline para Identificación de Objetos (Marzo 2024 - Mediados de Abril 2024)
 
