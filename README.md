@@ -119,3 +119,41 @@ Estos hallazgos sugieren la necesidad de:
 3. Exploración de arquitecturas alternativas o métodos híbridos para la estimación de pose que puedan ofrecer resultados más consistentes y precisos.
 
 ## Código y Guía de Uso
+
+### 1. Modelo YOLOv9 para Detección de Objetos
+
+#### Configuración Inicial
+1. Clone el repositorio de YOLOv9 en el directorio principal del proyecto:
+git clone https://github.com/WongKinYiu/yolov9
+
+2. Descargue los pesos pre-entrenados `yolo_ycb.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
+
+#### Ejecución del Modelo
+Desde la carpeta `object_detection`, ejecute el siguiente comando:
+
+```python main.py <img_size> <conf> <device> <weights> <source_folder> <project>```
+
+Donde:
+- `<img_size>`: Tamaño de la imagen de entrada (ej. 640)
+- `<conf>`: Umbral de confianza para la detección (ej. 0.25)
+- `<device>`: Dispositivo de ejecución ('cpu' o 'cuda')
+- `<weights>`: Ruta a los pesos del modelo (ej. '../yolov9/weights/yolo_ycb.pt')
+- `<source_folder>`: Carpeta con las imágenes de entrada
+- `<project>`: Carpeta de salida para los resultados
+
+#### Detección en Tiempo Real
+Para una versión dinámica en tiempo real, se ha preparado el script `webcam_modified.py` que utiliza la librería OpenCV. 
+
+**Nota:** Este script no se pudo probar debido a limitaciones en las cámaras del laboratorio. Asegúrese de tener una cámara compatible antes de ejecutar.
+
+### 2. Modelo YOLOv9 + Detección de Color
+
+
+Clona la carpeta del modelo yolov9 en el directorio del repositorio
+Coloca los pesos descargados yolo_ycb.pt en la carpeta weights
+Desde la carpeta object_detection ejecuta:
+main.py <img_size> <conf> <device> <weights> <source_folder> <project(save folder)>"
+
+Para una versión dinàmica en real time está preparado el script webcam_modified.py que hace uso de la libreria cv2. No se pudo probar porque las camaras del laboratorio no estaban preparadas.
+
+2. MODELO YOLOV9 + DETECCIÓN DE COLOR
