@@ -59,29 +59,64 @@ Esta pipeline integrada proporciona una solución completa para la detección y 
 
 ### 1. Arquitectura para Estimación de Pose
 
-[Pendiente de implementación]
+La implementación de la estimación de pose se desarrolló siguiendo un proceso iterativo de investigación, experimentación y optimización:
 
-### 2. Identificación de Propiedades de Interés
+#### 1.1 Selección de la Arquitectura
 
-[Pendiente de implementación]
+Tras una exhaustiva investigación y evaluación de diversas opciones, se optó por la arquitectura [Deep Object Pose Estimation (DOPE)](https://github.com/NVlabs/Deep_Object_Pose). Esta elección se basó en varios factores:
 
-### 3. Estrategias de Estimación de Propiedades
+- Casos de éxito documentados
+- Implementación en PyTorch
+- Estado del arte en el momento del proyecto
+- Ventajas sobre alternativas como PoseCNN
 
-Se planea desarrollar métodos basados en histogramas o k-means para la estimación de propiedades relevantes de los objetos.
+#### 1.2 Generación del Dataset Inicial
 
-### 4. Validación de Resultados
+Se construyó un dataset sintético siguiendo las directrices del proyecto DOPE:
 
-Se realizarán experimentos adicionales con objetos reales para validar la precisión de las estimaciones de pose y propiedades.
+- Utilización de modelos 3D de objetos YCB previamente entrenados con YOLO
+- Incorporación de distractores 3D para aumentar la complejidad de las escenas
+- Uso de mapas HDRI proporcionados por los autores para iluminación realista
+  [Enlace a los mapas HDRI](https://drive.google.com/file/d/1lp36MgTlS4OFaH0vdsTFhyGFJpQDY2YX/view)
 
-## Próximos Pasos
+El dataset inicial constaba de 20,000 imágenes generadas sintéticamente.
 
-- Implementar y optimizar la arquitectura para estimación de pose.
-- Desarrollar algoritmos para la identificación y estimación de propiedades de los objetos.
-- Realizar experimentos exhaustivos para validar los resultados de la Fase II.
+#### 1.3 Primer Intento de Entrenamiento y Optimización
 
-## Contribuciones
+Los resultados iniciales no fueron satisfactorios, lo que llevó a las siguientes mejoras:
 
-Las contribuciones a este proyecto son bienvenidas. Por favor, abra un issue para discutir los cambios propuestos antes de realizar un pull request.
+1. Expansión del dataset: De 20,000 a 75,000 imágenes
+2. Ajuste de las dimensiones de imagen: De 1920x1080 a 512x512 para optimizar el rendimiento de la red
+3. Aumento del tamaño de los objetos objetivo en las imágenes
+
+Estas modificaciones mejoraron los resultados, pero aún no alcanzaron un nivel satisfactorio de precisión.
+
+#### 1.4 Incorporación de Dataset Realista
+
+Para abordar las limitaciones del dataset sintético, se integró el dataset FAT (Falling Things) de NVIDIA:
+[FAT Dataset](https://research.nvidia.com/publication/2018-06_falling-things-synthetic-dataset-3d-object-detection-and-pose-estimation)
+
+Este dataset, utilizado en el paper original de DOPE, se combinó con los datos sintéticos generados previamente. Sin embargo, esta adición no produjo una mejora significativa en los resultados.
+
+#### 1.5 Análisis de Limitaciones
+
+Los resultados subóptimos se atribuyen principalmente a dos factores:
+
+1. **Método de generación de datos sintéticos:**
+   - El método original descrito en el paper está obsoleto y requiere versiones antiguas de Ubuntu y drivers de NVIDIA.
+   - El nuevo método de generación de datos no parece producir resultados de la misma calidad que el original.
+
+2. **Robustez del método DOPE:**
+   - Se han observado quejas en los issues de GitHub sobre malos resultados y problemas de convergencia.
+   - El método parece no ser determinista, lo que dificulta la reproducibilidad de resultados de alta calidad.
+
+#### 1.6 Conclusiones y Trabajo Futuro
+
+Estos hallazgos sugieren la necesidad de:
+
+1. Una revisión y actualización por parte de los autores del método de generación de datos sintéticos.
+2. Una investigación más profunda sobre la estabilidad y reproducibilidad del método DOPE.
+3. Exploración de arquitecturas alternativas o métodos híbridos para la estimación de pose que puedan ofrecer resultados más consistentes y precisos.
 
 ## Licencia
 
