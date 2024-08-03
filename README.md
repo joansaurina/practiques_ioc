@@ -3,7 +3,7 @@
 
 Este repositorio contiene el trabajo realizado para las prácticas del Instituto de Organización y Control (IOC), enfocadas en la identificación de objetos, el análisis de sus propiedades y la detección de su posición utilizando técnicas de aprendizaje profundo y visión por computador.
 
-## Fase I: Pipeline para Identificación de Objetos (Marzo 2024 - Mediados de Abril 2024)
+## Fase I: Pipeline para Identificación de Objetos (Marzo 2024 - Mediados de Abril 2024) + Detección de Color.
 
 ### 1. Creación y Mejora del Dataset
 
@@ -27,6 +27,33 @@ El modelo YOLO v9 fue entrenado y optimizado utilizando el dataset YCB mejorado,
 ### 4. Validación de Resultados
 
 Se realizaron experimentos con objetos reales en el laboratorio para validar la eficacia del modelo entrenado en la detección de objetos YCB.
+
+### 5. Detección y Análisis de Color
+
+Se ha desarrollado un pipeline robusto y eficiente para la detección y análisis de color de los objetos identificados. Este proceso consta de varias etapas interconectadas que aprovechan técnicas avanzadas de visión por computador y aprendizaje profundo:
+
+#### 5.1 Detección de Objetos y Consulta Ontológica
+
+- Se utiliza el modelo YOLO v9 previamente entrenado para detectar objetos en la imagen.
+- Para el objeto detectado, se realiza una consulta a una ontología predefinida para obtener información sobre la cantidad esperada de colores.
+
+#### 5.2 Extracción de Regiones de Interés
+
+- Se recorta la imagen original utilizando las coordenadas del bounding box proporcionadas por YOLO v9.
+- Este paso permite aislar cada objeto para un análisis más preciso y eficiente.
+
+#### 5.3 Segmentación Semántica
+
+- Se implementa el modelo [Segment Anything](https://github.com/facebookresearch/segment-anything) para una segmentación semántica de alta precisión.
+- Este paso genera máscaras detalladas para cada objeto, permitiendo una separación precisa del objeto y el fondo.
+
+#### 5.4 Análisis de Color mediante K-means
+
+- Se aplica el algoritmo K-means sobre las regiones segmentadas para identificar los colores dominantes.
+- El número de clusters (k) se ajusta dinámicamente basándose en la información obtenida de la ontología en el paso 5.1.
+- Este enfoque permite una detección precisa de los colores exactos presentes en el objeto, incluso en casos de objetos multicolor o con patrones complejos.
+
+Esta pipeline integrada proporciona una solución completa para la detección y análisis de color de objetos en imágenes, combinando técnicas de vanguardia en detección de objetos, segmentación semántica y análisis de clusters. La flexibilidad del sistema permite su adaptación a diversos escenarios y tipos de objetos, garantizando resultados precisos y fiables.
 
 ## Fase II: Pipeline para Estimación de Pose y Propiedades (Mediados de Abril 2024 - Mayo 2024)
 
