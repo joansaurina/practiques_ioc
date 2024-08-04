@@ -165,8 +165,11 @@ Para demostrar el funcionamiento del sistema, hemos incluido tres imágenes de p
 2. Descargue los pesos pre-entrenados `sam_small.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
 
 #### Ejecución del Modelo
+
+Ejecute modelo YOLOV9 para tener la bounding box del objeto.
 Desde la carpeta `color_detection`, ejecute el siguiente comando:
 
-SAM.py
+```python color.py <bounding_box> <path_image> <número_colores_ontología>```
+
 
 
