@@ -149,17 +149,12 @@ Para una versión dinámica en tiempo real, se ha preparado el script `webcam_mo
 
 Para demostrar el funcionamiento del sistema, hemos incluido tres imágenes de prueba en la carpeta `images` del repositorio. A continuación, se presentan los resultados obtenidos para cada una de ellas.
 
-### Imagen 1: image_test1_1.png
+<img src="images/image_test1_1.png" alt="Imagen 1" width="300"/>
 
-![Imagen 1](images/image_test1_1.png)
+<img src="images/image_test1_2.jpeg" alt="Imagen 2" width="300"/>
 
-### Imagen 2: image_test1_2.jpeg
+<img src="images/image_test1_3.jpg" alt="Imagen 3" width="300"/>
 
-![Imagen 2](images/image_test1_2.jpeg)
-
-### Imagen 3: image_test1_3.jpg
-
-![Imagen 3](images/image_test1_3.jpg)
 
 ### 2. Modelo YOLOv9 + Detección de Color
 
