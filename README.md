@@ -167,9 +167,11 @@ Para demostrar el funcionamiento del sistema, hemos incluido tres imágenes de p
 #### Ejecución del Modelo
 
 Ejecute modelo YOLOV9 para tener la bounding box del objeto.
+
 Desde la carpeta `color_detection`, ejecute el siguiente comando:
 
 ```python color.py <bounding_box> <path_image> <número_colores_ontología>```
 
+**Nota:** en un futuro fàcil implementación para múltiples objetos y enlazar ejecución YOLO + consulta ontología + colores exactos objeto concreto.
 
 
