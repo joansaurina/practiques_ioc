@@ -145,5 +145,21 @@ Para una versión dinámica en tiempo real, se ha preparado el script `webcam_mo
 
 **Nota:** Este script no se pudo probar debido a limitaciones en las cámaras del laboratorio. Asegúrese de tener una cámara compatible antes de ejecutar.
 
+#### Ejemplos de Uso
+
+Para demostrar el funcionamiento del sistema, hemos incluido tres imágenes de prueba en la carpeta `images` del repositorio. A continuación, se presentan los resultados obtenidos para cada una de ellas.
+
+### Imagen 1: image_test1_1.png
+
+![Imagen 1](images/image_test1_1.png)
+
+### Imagen 2: image_test1_2.jpeg
+
+![Imagen 2](images/image_test1_2.jpeg)
+
+### Imagen 3: image_test1_3.jpg
+
+![Imagen 3](images/image_test1_3.jpg)
+
 ### 2. Modelo YOLOv9 + Detección de Color
 
