@@ -41,21 +41,12 @@ def main(args):
     project = args[5]
 
     command = (f"python ../../yolov9/detect.py --img {img_size} --conf {conf} --device {device} "
-               f"--weights {weights} --source ../../test_images/{source_folder} --save-txt "
+               f"--weights {weights} --source {source_folder} --save-txt "
                f"--save-conf --project {project}")
     
     print(f"Executing command: {command}")
     os.system(command)
     
-    # Read the generated label files
-    output_dir = os.path.join(project)
-    label_sets = read_labels(os.path.join(output_dir, "labels"))
-    
-    # Find common objects
-    common_objects = find_common_objects(label_sets)
-    
-    # Write summary file
-    write_summary(common_objects, output_dir)
 
 if __name__ == '__main__':
     main(sys.argv[1:])
