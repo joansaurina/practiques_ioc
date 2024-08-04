@@ -136,7 +136,7 @@ Donde:
 - `<img_size>`: Tamaño de la imagen de entrada (ej. 640)
 - `<conf>`: Umbral de confianza para la detección (ej. 0.25)
 - `<device>`: Dispositivo de ejecución ('cpu' o 'cuda')
-- `<weights>`: Ruta a los pesos del modelo (ej. '../yolov9/weights/yolo_ycb.pt')
+- `<weights>`: Ruta a los pesos del modelo (ej. '../weights/yolo_ycb.pt')
 - `<source_folder>`: Carpeta con las imágenes de entrada
 - `<project>`: Carpeta de salida para los resultados
 
