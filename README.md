@@ -123,7 +123,7 @@ Estos hallazgos sugieren la necesidad de:
 ### 1. Modelo YOLOv9 para Detección de Objetos
 
 #### Configuración Inicial
-1. Clone el repositorio de YOLOv9 en el directorio principal del proyecto:
+1. Clone el repositorio de YOLOv9 en el directorio principal del proyecto.
 
 2. Descargue los pesos pre-entrenados `yolo_ycb.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
 
@@ -149,12 +149,24 @@ Para una versión dinámica en tiempo real, se ha preparado el script `webcam_mo
 
 Para demostrar el funcionamiento del sistema, hemos incluido tres imágenes de prueba en la carpeta `images` del repositorio. A continuación, se presentan los resultados obtenidos para cada una de ellas.
 
-<img src="images/image_test1_1.png" alt="Imagen 1" width="300"/>
+<img src="data/images/image_test1_1.png" alt="Imagen 1" width="300"/>
 
-<img src="images/image_test1_2.jpeg" alt="Imagen 2" width="300"/>
+<img src="data/images/image_test1_2.jpeg" alt="Imagen 2" width="300"/>
 
-<img src="images/image_test1_3.jpg" alt="Imagen 3" width="300"/>
+<img src="data/images/image_test1_3.jpg" alt="Imagen 3" width="300"/>
 
 
 ### 2. Modelo YOLOv9 + Detección de Color
+
+#### Configuración Inicial
+
+1. Clone el repositorio de Segment Anything en el directorio principal del proyecto.
+
+2. Descargue los pesos pre-entrenados `sam_small.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
+
+#### Ejecución del Modelo
+Desde la carpeta `color_detection`, ejecute el siguiente comando:
+
+SAM.py
+
 
