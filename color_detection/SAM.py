@@ -1,21 +1,11 @@
 import torch
 import cv2
 import numpy as np
-import supervision as sv
-import matplotlib.pyplot as plt
 
-from ...segment.segment_anything.automatic_mask_generator import SamAutomaticMaskGenerator
-from ...segment.segment_anything import sam_model_registry
+from ..segment.segment_anything.automatic_mask_generator import SamAutomaticMaskGenerator
+from ..segment.segment_anything import sam_model_registry
 
 def segment_image_with_sam(image_path, normalized_box, device, model_type):
-    """
-    # Ejemplo de uso
-    normalized_box = [0.497059, 0.584683, 0.175294, 0.114875]
-    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-    model_type = vit_h = big, vit_l = mid, vit_b = small
-    image_path = '*'
-    cropped_image_rgb, detections, annotated_image_rgb = segment_image_with_sam(image_path, normalized_box, device, model_type)
-    """
     if not isinstance(normalized_box, (list, np.ndarray)) or len(normalized_box) != 4:
         raise ValueError("normalized_box debe ser una lista o un numpy array de longitud 4.")
     
