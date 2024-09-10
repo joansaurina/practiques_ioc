@@ -125,7 +125,8 @@ Estos hallazgos sugieren la necesidad de:
 #### Configuración Inicial
 1. Clone el repositorio de YOLOv9 en el directorio principal del proyecto.
 
-2. Descargue los pesos pre-entrenados `yolo_ycb.pt` y colóquelos en la carpeta `weights` del repositorio clonado.
+2. Descargue los pesos pre-entrenados `yolo_ycb.pt` y colóquelos en la carpeta `weights` del repositorio clonado:
+   https://drive.google.com/file/d/11D55tenS4zeRgtXXpwsBCVQpW0LDlZ_K/view?usp=sharing
 
 #### Ejecución del Modelo
 Desde la carpeta `object_detection`, ejecute el siguiente comando:
